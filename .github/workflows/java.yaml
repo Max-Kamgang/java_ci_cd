@@ -15,7 +15,7 @@ env:
   ARTIFACTORY_URL: ${{ secrets.ARTIFACT_URL }}
   SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  ECR_ROLE: ${{ secrets.ECR_ACESS_ROLE }}
+  ECR_ROLE: ${{ secrets.ECR_ACCESS_ROLE }}
   AWS_REGION: ${{ secrets.AWS_REGION }}
   VAULT_URL: ${{ secrets.VAULT_URL }}  
   VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}   
@@ -66,5 +66,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ env.SONAR_HOST_URL }}
-        #run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=geo_app -Dsonar.qualitygate.wait=true
-        run:  mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=geo_app -Dsonar.projectName=geo_app
+        #run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=utc-app -Dsonar.qualitygate.wait=true
+        run:  mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=utc-app -Dsonar.projectName=utc-app
